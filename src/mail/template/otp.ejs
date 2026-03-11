@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body,
+      p,
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      body {
+        background-color: #f4f7f6;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrapper {
+        width: 100%;
+        background-color: #f4f7f6;
+        padding: 40px 0;
+      }
+      .main-card {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+      .header {
+        background-color: #2563eb; /* A trustworthy corporate blue */
+        color: #ffffff;
+        padding: 24px;
+        text-align: center;
+      }
+      .header h1 {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .content {
+        padding: 40px 30px;
+        color: #334155;
+        line-height: 1.6;
+      }
+      .greeting {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #0f172a;
+      }
+      .instructions {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+      .otp-container {
+        text-align: center;
+        margin: 35px 0;
+      }
+      .otp-box {
+        display: inline-block;
+        padding: 16px 32px;
+        background-color: #f8fafc;
+        border: 2px dashed #cbd5e1;
+        border-radius: 8px;
+        font-size: 36px;
+        font-weight: 700;
+        color: #2563eb;
+        letter-spacing: 8px;
+      }
+      .warning-box {
+        background-color: #fef2f2;
+        border-left: 4px solid #ef4444;
+        padding: 16px;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #7f1d1d;
+        margin-top: 30px;
+      }
+      .footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 13px;
+        color: #94a3b8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main-card">
+        <div class="header">
+          <h1>Authentication</h1>
+        </div>
+        <div class="content">
+          <p class="greeting">Hello <%= name %>,</p>
+          <p class="instructions">
+            Thank you for registering. To complete your account setup, please
+            use the verification code below:
+          </p>
+          <div class="otp-container">
+            <div class="otp-box"><%= otp %></div>
+          </div>
+          <p class="instructions">
+            Enter this code in the app to verify your email address and activate
+            your account.
+          </p>
+          <div class="warning-box">
+            <strong>Security Notice:</strong> This code will expire in exactly
+            10 minutes. Please do not share this code with anyone. Our team will
+            never ask you for your password or OTP.
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>This is an automated message, please do not reply to this email.</p>
+      </div>
+    </div>
+  </body>
+</html>
